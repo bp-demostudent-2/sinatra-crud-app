@@ -4,6 +4,7 @@ require 'sinatra'
 
 # require active record to make use of it
 require 'sinatra/activerecord'
+register(Sinatra::ActiveRecordExtension)
 
 # Define the Task model
 class Task < ActiveRecord::Base

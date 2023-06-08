@@ -8,8 +8,6 @@ configure do
   # we can set the default layout name to use and sinatra 
   # will look for that file
   set(:erb, :layout => :application_layout)
-
-  register(Sinatra::ActiveRecordExtension)
 end
 
 configure :development do
@@ -23,6 +21,8 @@ configure :development do
   use(BetterErrors::Middleware)
   BetterErrors.application_root = __dir__
   BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
+
+  set(:database, {adapter: "sqlite3", database: "db/development.sqlite3"})
 
   # appdev support patches
   require "appdev_support"
