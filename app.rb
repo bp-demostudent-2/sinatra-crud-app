@@ -3,7 +3,7 @@
 require 'sinatra'
 
 # require active record to make use of it
-require 'active_record'
+require 'sinatra/activerecord'
 
 # Define the Task model
 class Task < ActiveRecord::Base
