@@ -10,7 +10,7 @@ gem 'sinatra-contrib'
 gem 'puma', '~> 5.0'
 
 # use active record
-gem 'activerecord'
+gem 'sinatra-activerecord'
 
 group :development do
   gem 'better_errors'
@@ -33,4 +33,8 @@ group :test do
   gem 'webmock'
   gem 'webdrivers'
   gem 'i18n'
+end
+
+group :production do
+  gem "pg"
 end
