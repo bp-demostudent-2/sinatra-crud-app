@@ -37,7 +37,3 @@ group :test do
   gem 'webdrivers'
   gem 'i18n'
 end
-
-group :production do
-  gem "pg"
-end
